@@ -1,6 +1,24 @@
 'use strict'
 
 /**
+ * Class Event: A Parisian event class
+ */
+var Event = function Event(id, title="", description="", place="", startDate="", endDate="", link="", period="", address="", city="", departement="", price="") {
+  this.id = id;
+  this.title = title;
+  this.description = description;
+  this.place = place;
+  this.startDate = startDate;
+  this.endDate = endDate;
+  this.link = link;
+  this.period = period;
+  this.address = address;
+  this.city = city;
+  this.departement = departement;
+  this.price = price;
+}
+
+/**
  *  Class SearchEngine: A class to manage API request with a search bar.  
  */
 var SearchEngine = function SearchEngine () {
@@ -53,6 +71,7 @@ SearchEngine.prototype.doODPAPIRequest = function (requestParam) {
   var request = "https://opendata.paris.fr/api/records/1.0/search/?dataset=evenements-a-paris&q="+requestParam+"&rows=20&refine.tags=Paris";
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      jsonToEvents(this.responseText);
       return this.responseText;
     }
     return false;
@@ -60,5 +79,14 @@ SearchEngine.prototype.doODPAPIRequest = function (requestParam) {
   xhttp.open("GET", request, true);
   xhttp.send();
 }
+
+/**
+ * Allows you to tranform json to Event objects
+ * @params {String} json
+ */
+function jsonToEvents(json) {
+  console.log(json);
+}
+
 
 SearchEngine.prototype.init();
