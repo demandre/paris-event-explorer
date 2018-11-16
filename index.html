@@ -18,7 +18,78 @@
             </div>
         </div> 
     </div>
+  
+  <!-- BUTTON GOOGLE MAPS -->
+          <div class="container">
+            <div class="fixed-bottom" style="margin-left:80%;">   
+              <button type="button"class="btn btn-primary" id="maps-button">Afficher sur Google Maps</button>   
+            </div>
+          </div>
+            <!-- -->
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1" data-toggle="modal" data-target="#infoModal" id="title-list">GUMBALL</h5>
+                <small data-toggle="modal" data-target="#infoModal">More info</small>
+              </div>
+              <p class="mb-1" data-toggle="modal" data-target="#infoModal" id="description-list">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small>Adress: 5 rue de la Rue, 75019 PARIS</small>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">CONCERT</h5>
+                <small class="text-muted">More info</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Adress : 47 Boulevard de Thomas, 75009 PARIS</small>
+            </a>
+          </div>
+          <!-- Button trigger modal 
+          <p data-toggle="modal" data-target="#infoModal">
+            Launch demo modal
+          </p> -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <h2 class="modal-title" id="title-modal">TITLE</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Description -->
+                <div class="modal-body">
+                  <h3> Description </h3>
+                  <p id="modal-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget orci sit amet neque placerat dictum. Vestibulum vel sagittis velit. Nunc in eleifend nibh. Nulla congue diam nec volutpat fringilla. Aliquam dapibus, est quis rhoncus tempus, neque lectus venenatis quam, eget finibus eros nisl suscipit tortor.</p>
+                </div>
+                <!-- Price -->
+                <div class="modal-body">
+                  <h3> Price </h3>
+                  <p id="modal-price">For 1 personn : 5$</p>
+                </div>
+                <!-- Adress -->
+                <div class="modal-body">
+                  <h3> Adress </h3>
+                  <p id="modal-adress"> 3 Rue de la Modalité, 75019 PARIS</p>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button"class="btn btn-primary">
+                    <a href="http://www.google.fr/" style="color:white;"> Commander </a>
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+  
+  <script src="displayer/displayer.js"></script>
+  <script src="search-engine/search-engine.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 </body>
-<script src="displayer/displayer.js"></script>
-<script src="search-engine/search-engine.js"></script>
 </html>
