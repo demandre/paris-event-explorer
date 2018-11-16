@@ -2,7 +2,9 @@
 
 /**
  * Class Event: A Parisian event class
- */
+ * @params {Number} id, {String} title, {String} description, {String} place, {String} startDate, {String} endDate, 
+ *        {String} link, {String} period, {String} address, {String} city, {String} departement, {String} price   
+ */ 
 var Event = function Event(id, title="", description="", place="", startDate="", endDate="", link="", period="", address="", city="", departement="", price="") {
   this.id = id;
   this.title = title;
@@ -47,7 +49,7 @@ SearchEngine.prototype.init = function () {
 
 /**
  * This function check search format to launch it.
- * 0params {String} search.
+ * @params {String} search.
  */
 SearchEngine.prototype.checkSearch = function (search) {
   var regexSearch = /[a-zA-Z-0-9-\/]+/;
@@ -64,7 +66,6 @@ SearchEngine.prototype.checkSearch = function (search) {
 /**
   * Request OpenDataParis API with params given and return API response
   * @params {String} requestParam
-  * @return String or Boolean
   */
 SearchEngine.prototype.doODPAPIRequest = function (requestParam) {
   var xhttp = new XMLHttpRequest();
