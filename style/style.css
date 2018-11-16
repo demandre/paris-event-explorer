@@ -10,6 +10,12 @@
   background-size: cover;
 }
 
+@font-face{
+    font-family: 'extinction_event';
+    src: url('../fonts/extinction_event/ExtinctionEvent.otf')
+}
+
+
 #container{
 	background: rgba(0, 0, 0, 0.8);
 	width: 100%;
@@ -18,16 +24,18 @@
 
 h1{
     text-align: center;
-    font-family: sans-serif;
-    font-size: 60px;
+    font-family: 'extinction_event';
+    font-size: 40px;
     color: #fff;
     margin: 0;
     padding-top: 70px;
     padding-bottom: 20px;
 }
 h1 #span2{
-    font-size: 81px;
+    font-size: 70px;
 }
+
+
 
 #searchBarContainer {
 	position: absolute;
