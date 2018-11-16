@@ -69,7 +69,7 @@ SearchEngine.prototype.checkSearch = function (search) {
   */
 SearchEngine.prototype.doODPAPIRequest = function (requestParam) {
   var xhttp = new XMLHttpRequest();
-  var request = "https://opendata.paris.fr/api/records/1.0/search/?dataset=evenements-a-paris&q="+requestParam+"&rows=20&refine.tags=Paris";
+  var request = "https://opendata.paris.fr/api/records/1.0/search/?dataset=evenements-a-paris&q="+requestParam+"&rows=20";
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
           searchEngine.jsonToEvents(this.responseText);
